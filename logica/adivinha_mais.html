@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<button>Compare com o meu segredo</button>
+
+<script>
+    function verifica() {
+        if(input.value == segredo) {
+            alert("Você acertou!");
+        } else {
+            alert("Você errou!");
+        }
+        input.value = "";
+        input.focus();
+        segredo = Math.round(Math.random() * 10);
+        console.log(segredo);
+    }
+
+    let segredo = Math.round(Math.random() * 10);
+    
+
+    let input = document.querySelector("input");
+        input.focus();
+    
+    let button = document.querySelector("button");
+    // função sem parênteses para que o button.onclick armazene a função
+    button.onclick = verifica;
+
+</script>
